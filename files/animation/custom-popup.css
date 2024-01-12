@@ -1,0 +1,181 @@
+
+        .mfp-3d-unfold {
+  .mfp-content {
+    perspective: 2000px;
+  }
+  
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotateY(-60deg);
+  }
+  
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+  
+  &.mfp-removing {
+    .mfp-with-anim {
+      transform: rotateY(60deg);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+}
+
+    .share-buttons-block {
+        display: flex;
+        align-items: center;
+       background-image: url('files/images/share.jpg'); /* Add a background image */ 
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        font-family: 'YourFantasyFont', cursive; /* Use your chosen fantasy font */
+    }
+
+    .share-icon {
+        flex: 1;
+        max-width: 30px; /* Adjust the size as needed */
+        margin-right: 10px;
+    }
+
+    .sbb-title {
+        flex: 4; /* Adjust the width of the text section */
+        font-size: 24px;
+        color: #ffcc00; /* Magical color */
+    }
+
+    .sbb-social {
+        flex: 2;
+        display: flex;
+        align-items: center;
+    }
+
+/* Adjust the position and styling of the share button */
+.share-button {
+    background-color: #FF7433; /* Updated button color to FF7433 */
+    color: #FF80CD; /* Contrasting color */
+    padding: 10px 20px; /* Adjust padding for styling */
+    border: 2px solid #FF0000; /* Border styling: 2px solid with color FF9F33 */
+    border-radius: 50px; /* Adjust border radius as needed */
+    text-transform: uppercase;
+    font-size: 18px; /* Increase font size for emphasis */
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    margin-left: 500px; /* Adjust the margin to move it left or right as needed */
+}
+
+
+    .share-button:hover {
+        background-color: #ff9900; /* Lighter shade of magical color on hover */
+    }
+
+   
+    .popup {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    padding: 25px 60px; /* Slightly bigger */
+    background-color: rgba(0, 0, 0, 0.8); /* Darkened background */
+    color: #ffffff;
+    border-radius: 20px; /* Rounded corners */
+    border: 2px solid red; /* Slim red border */
+    z-index: 999;
+    transition: transform 0.9s ease-in-out; /* Apply pop-up animation */
+}
+
+/* Add hover state for .popup to trigger the animation */
+.popup.active {
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* Magical background image */
+.popup::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('files/images/popup.jpg'); /* Updated background image path */
+    border-radius: 20px; /* Rounded corners */
+    background-size: cover;
+    opacity: 0.7; /* Darkened background image */
+    z-index: -1;
+}
+
+    /* Style for the close button in the popup */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+    color: #ff0000; /* Red color for the close button */
+}
+/* Style the fantasy icons for different platforms */
+    .platform-icons {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .platform-icon {
+        margin-right: 15px; /* Adjust spacing between icons */
+    }
+.copy-link {
+    background-color: #291b62; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a magical effect */
+}
+
+.copy-link input {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    background-color: transparent; /* Transparent input background */
+    color: #fff; /* Text color */
+}
+
+.copy-link button {
+    background-color: #ff8c00; /* Magical button color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.copy-link button:hover {
+    background-color: #e68a00; /* Button color on hover */
+}
+
+
+ .
+/* Rest of your CSS styles */
